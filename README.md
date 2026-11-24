@@ -32,7 +32,7 @@ If Tesseract is installed but not on PATH, set its executable path for the curre
 $env:TESSERACT_CMD = "C:\Program Files\Tesseract-OCR\tesseract.exe"
 ```
 
-Open PowerShell in the extracted `LocalHybridSearch` folder (the folder containing this README).
+Open PowerShell in the project folder (the folder containing this README).
 
 ```powershell
 py -3.11 -m venv .venv
@@ -60,21 +60,21 @@ Open **http://127.0.0.1:8000** in a browser. Keep the PowerShell window running 
 
 ## 3. Try a controlled dataset
 
-The distribution archive includes a sample dataset under `datasets/`. For a fresh source checkout without generated datasets, run:
+To generate the sample dataset in a fresh source checkout, run:
 
 ```powershell
 .\.venv\Scripts\python.exe -m scripts.generate_dataset
 ```
 
-The dataset contains 55 controlled synthetic files, 20 queries and 1,100 draft binary relevance judgments, plus a separate 250-file collection for performance testing. Use the absolute path to `datasets/controlled` in the application. To generate a fresh copy without overwriting the included data, pass `--output datasets_new`.
+The dataset contains 55 controlled synthetic files, 20 queries and 1,100 draft binary relevance judgments, plus a separate 250-file collection for performance testing. Use the absolute path to `datasets/controlled` in the application. To generate a fresh copy without overwriting existing data, pass `--output datasets_new`.
 
 | Query | What to observe |
 |---|---|
-| Orion-482 | Exact reference found through keyword retrieval |
-| car accident | Semantic retrieval finds a document about a vehicle collision |
-| budget_q7 | Metadata search finds a file by its filename |
-| LUMEN-204 | OCR text makes an image searchable |
-| car accident (hybrid) | RRF combines evidence from the two retrieval methods |
+| `Orion-482` | Exact reference found through keyword retrieval |
+| `car accident` | Semantic retrieval finds a document about a vehicle collision |
+| `budget_q7` | Metadata search finds a file by its filename |
+| `LUMEN-204` | OCR text makes an image searchable |
+| `vehicle collision` (hybrid) | Compare the keyword and semantic ranks combined by RRF |
 
 To check incremental indexing, refresh a previously indexed folder, modify a test TXT file and refresh again. The indexing report distinguishes unchanged, added, updated and removed paths.
 
@@ -86,9 +86,23 @@ To check incremental indexing, refresh a previously indexed folder, modify a tes
 .\.venv\Scripts\python.exe -m scripts.evaluate --dataset datasets --scale
 ```
 
-Evaluation uses isolated temporary indexes, leaving the application's index untouched. Results are written to `evaluation_results/controlled.json` and `evaluation_results/scale.json`.
+Evaluation uses isolated temporary indexes, leaving the application's index untouched. Full results are written to `evaluation_results/controlled.json` and `evaluation_results/scale.json` locally.
 
-The synthetic judgments describe known generated content and must be reviewed against the original files before being used as final experimental ground truth. The larger corpus measures system performance and known-file discoverability only; it is not exhaustively labelled.
+### Preliminary controlled retrieval results
+
+The 55-file collection includes 20 queries (five each for exact text, conceptual meaning, filenames and OCR). Each query has one predefined relevant file. The controlled evaluation was also reproduced on the Windows development machine.
+
+| Method | Precision@5 | Recall@10 | MRR | nDCG@10 | Windows median search latency |
+|---|---:|---:|---:|---:|---:|
+| Keyword | 0.15 | 0.75 | 0.75 | 0.75 | 1.07 ms |
+| Semantic | 0.20 | 1.00 | 1.00 | 1.00 | 12.38 ms |
+| Hybrid | 0.20 | 1.00 | 0.93 | 0.95 | 12.28 ms |
+
+Keyword retrieval found the expected file for exact, filename and OCR queries but not conceptual queries. Semantic and hybrid retrieval found the expected file in the top 10 for all 20 queries; hybrid sometimes placed it lower in the ranking. These results come from synthetic draft relevance judgments and do not establish general accuracy on real-world data. The latency figures are warm retrieval measurements, not end-to-end application timings.
+
+The separate 250-file experiment measures indexing, refresh, warm query latency and known-file discovery, rather than exhaustive retrieval accuracy. Its currently published measurements were collected in the initial Linux environment.
+
+See [`docs/prototype_results/README.md`](docs/prototype_results/README.md) for methodology, findings and limitations; [`docs/prototype_results/controlled.json`](docs/prototype_results/controlled.json) contains the updated controlled summary and [`docs/prototype_results/scale.json`](docs/prototype_results/scale.json) contains the initial scale measurements.
 
 ## 5. Project layout
 
@@ -107,9 +121,9 @@ The synthetic judgments describe known generated content and must be reviewed ag
 
 ## 6. Testing and continuous integration
 
-The project uses pytest for unit and integration testing. GitHub Actions runs the tests on pushes and pull requests using `.github/workflows/tests.yml`. The workflow installs Tesseract and Python dependencies, downloads the pretrained embedding model, then executes the test suite, including the semantic integration test.
+The project uses pytest for unit and integration testing. The latest local run completed with **16 passing tests**. GitHub Actions runs the suite on pushes and pull requests using `.github/workflows/tests.yml`. The workflow installs Tesseract and Python dependencies, downloads the pretrained embedding model, then executes the tests, including the semantic integration test.
 
-The generated datasets, pretrained model, local indexes, and evaluation outputs are excluded from version control. Datasets can be regenerated using `python -m scripts.generate_dataset`. CI execution should be verified using the workflow run results in the repository.
+Generated datasets, the pretrained model, local indexes and local evaluation outputs are excluded from version control. Selected evaluation summaries and reports are committed separately under `docs/prototype_results/`. Datasets can be regenerated using `python -m scripts.generate_dataset`.
 
 ## Notes
 
