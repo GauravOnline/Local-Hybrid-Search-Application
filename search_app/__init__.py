@@ -1,0 +1,1 @@
+"""Local hybrid information retrieval."""

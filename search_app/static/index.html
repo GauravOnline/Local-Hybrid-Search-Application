@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Hybrid Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="brand"><span class="brand-icon">⌕</span><div><strong>Local Hybrid Search</strong><small>Personal information retrieval</small></div></div>
+        <span class="private">● Local workspace</span>
+    </header>
+    <main>
+        <aside>
+            <h2>Index overview</h2>
+            <div class="stats">
+                <div><b id="file-count">0</b><span>Files</span></div>
+                <div><b id="chunk-count">0</b><span>Chunks</span></div>
+                <div><b id="vector-count">0</b><span>Vectors</span></div>
+                <div><b id="storage">0 KB</b><span>Index storage</span></div>
+            </div>
+            <h2>Source folders</h2>
+            <form id="index-form">
+                <label for="folder">Local folder path</label>
+                <input id="folder" placeholder="C:\Users\Name\Documents" required>
+                <button class="primary" type="submit">Index / refresh folder</button>
+            </form>
+            <p class="hint">Paste an absolute folder path. Refresh to detect added, edited, renamed and deleted files.</p>
+            <div id="folders"></div>
+            <div id="index-report" aria-live="polite"></div>
+            <div class="privacy-note"><strong>Private by design</strong><p>Files, OCR text, embeddings and queries stay on this computer. Original files are not modified.</p></div>
+        </aside>
+        <section class="workspace">
+            <div class="intro"><span class="eyebrow">DOCUMENT DISCOVERY</span><h1>Find what you remember.</h1><p>Search documents, notes and screenshots by keyword or meaning.</p></div>
+            <form id="search-form" class="search-panel">
+                <label for="query">Search query</label>
+                <div class="query-row"><input id="query" placeholder="e.g. vehicle collision" required><button class="primary" type="submit">Search</button></div>
+                <fieldset>
+                    <legend>Retrieval mode</legend>
+                    <div class="modes">
+                        <label><input type="radio" name="mode" value="keyword"> Keyword <small>FTS5 / BM25</small></label>
+                        <label><input type="radio" name="mode" value="semantic"> Semantic <small>Embeddings / FAISS</small></label>
+                        <label><input type="radio" name="mode" value="hybrid" checked> Hybrid <small>Rank fusion / RRF</small></label>
+                    </div>
+                </fieldset>
+                <div class="filters">
+                    <label>File type<select id="type"><option value="">All types</option><option>.pdf</option><option>.docx</option><option>.txt</option><option>.png</option><option>.jpg</option><option>.jpeg</option></select></label>
+                    <label>Folder<select id="filter-folder"><option value="">All folders</option></select></label>
+                    <label>Results<select id="limit"><option>10</option><option>5</option><option>20</option><option>50</option></select></label>
+                </div>
+            </form>
+            <div class="result-heading"><h2>Search results</h2><span id="search-status" aria-live="polite">Ready</span></div>
+            <div id="results" aria-live="polite"><div class="empty"><span>⌕</span><h3>Start with a search</h3><p>Index a source folder, then enter a query above.</p></div></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,1340 @@
+{
+  "dataset": "scale",
+  "hardware": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "processor": "AMD EPYC 9V74 80-Core Processor",
+  "logical_cpus": 9,
+  "python": "3.12.14",
+  "repetitions": 3,
+  "model": "all-MiniLM-L6-v2 (CPU)",
+  "inference_threads": 4,
+  "label_status": "known-file checks only",
+  "initial_index": {
+    "folder": "scale",
+    "discovered": 250,
+    "added": 250,
+    "updated": 0,
+    "unchanged": 0,
+    "removed": 0,
+    "errors": [],
+    "warnings": [],
+    "seconds": 7.227
+  },
+  "refresh": {
+    "folder": "scale",
+    "discovered": 250,
+    "added": 0,
+    "updated": 0,
+    "unchanged": 250,
+    "removed": 0,
+    "errors": [],
+    "warnings": [],
+    "seconds": 0.025
+  },
+  "status": {
+    "files": 250,
+    "chunks": 250,
+    "vectors": 250,
+    "folders": [
+      "scale"
+    ],
+    "storage_bytes": 1123370
+  },
+  "summary": {
+    "keyword": {
+      "all": {
+        "median_ms": 0.3175,
+        "p95_ms": 0.5034999999999998,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 0.75
+      },
+      "conceptual": {
+        "median_ms": 0.342,
+        "p95_ms": 0.577,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 0
+      },
+      "exact": {
+        "median_ms": 0.329,
+        "p95_ms": 0.516,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "metadata": {
+        "median_ms": 0.305,
+        "p95_ms": 0.36129999999999995,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "ocr": {
+        "median_ms": 0.315,
+        "p95_ms": 0.36879999999999996,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      }
+    },
+    "semantic": {
+      "all": {
+        "median_ms": 7.041,
+        "p95_ms": 8.51255,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "conceptual": {
+        "median_ms": 6.675,
+        "p95_ms": 7.6838999999999995,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "exact": {
+        "median_ms": 6.726,
+        "p95_ms": 8.3426,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "metadata": {
+        "median_ms": 7.139,
+        "p95_ms": 8.062,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "ocr": {
+        "median_ms": 8.038,
+        "p95_ms": 14.67409999999998,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      }
+    },
+    "hybrid": {
+      "all": {
+        "median_ms": 7.931,
+        "p95_ms": 11.976249999999983,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "conceptual": {
+        "median_ms": 7.842,
+        "p95_ms": 33.996199999999945,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "exact": {
+        "median_ms": 8.05,
+        "p95_ms": 11.1764,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "metadata": {
+        "median_ms": 7.248,
+        "p95_ms": 8.442,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      },
+      "ocr": {
+        "median_ms": 9.02,
+        "p95_ms": 10.0172,
+        "within_5s_fraction": 1.0,
+        "known_file_rate": 1
+      }
+    }
+  },
+  "queries": [
+    {
+      "query_id": "Q01",
+      "category": "exact",
+      "mode": "keyword",
+      "ranked_paths": [
+        "exact/Orion-482.txt"
+      ],
+      "latencies_ms": [
+        0.315,
+        0.329,
+        0.335
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q02",
+      "category": "exact",
+      "mode": "keyword",
+      "ranked_paths": [
+        "exact/ZEPHYR-19.pdf",
+        "other/note_19.pdf",
+        "archive/entry_019.txt"
+      ],
+      "latencies_ms": [
+        0.318,
+        0.424,
+        0.317
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q03",
+      "category": "exact",
+      "mode": "keyword",
+      "ranked_paths": [
+        "exact/invoice.docx"
+      ],
+      "latencies_ms": [
+        0.303,
+        0.501,
+        0.379
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q04",
+      "category": "exact",
+      "mode": "keyword",
+      "ranked_paths": [
+        "exact/cedar.txt"
+      ],
+      "latencies_ms": [
+        0.384,
+        0.551,
+        0.341
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q05",
+      "category": "exact",
+      "mode": "keyword",
+      "ranked_paths": [
+        "exact/atlas.pdf"
+      ],
+      "latencies_ms": [
+        0.294,
+        0.282,
+        0.328
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q06",
+      "category": "conceptual",
+      "mode": "keyword",
+      "ranked_paths": [],
+      "latencies_ms": [
+        0.261,
+        0.252,
+        0.626
+      ],
+      "known_file_found": false
+    },
+    {
+      "query_id": "Q07",
+      "category": "conceptual",
+      "mode": "keyword",
+      "ranked_paths": [
+        "conceptual/security.docx",
+        "conceptual/travel.txt"
+      ],
+      "latencies_ms": [
+        0.556,
+        0.378,
+        0.387
+      ],
+      "known_file_found": false
+    },
+    {
+      "query_id": "Q08",
+      "category": "conceptual",
+      "mode": "keyword",
+      "ranked_paths": [
+        "conceptual/security.docx",
+        "conceptual/travel.txt"
+      ],
+      "latencies_ms": [
+        0.384,
+        0.342,
+        0.375
+      ],
+      "known_file_found": false
+    },
+    {
+      "query_id": "Q09",
+      "category": "conceptual",
+      "mode": "keyword",
+      "ranked_paths": [],
+      "latencies_ms": [
+        0.276,
+        0.374,
+        0.315
+      ],
+      "known_file_found": false
+    },
+    {
+      "query_id": "Q10",
+      "category": "conceptual",
+      "mode": "keyword",
+      "ranked_paths": [],
+      "latencies_ms": [
+        0.287,
+        0.265,
+        0.308
+      ],
+      "known_file_found": false
+    },
+    {
+      "query_id": "Q11",
+      "category": "metadata",
+      "mode": "keyword",
+      "ranked_paths": [
+        "metadata/budget_q7.pdf"
+      ],
+      "latencies_ms": [
+        0.314,
+        0.358,
+        0.306
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q12",
+      "category": "metadata",
+      "mode": "keyword",
+      "ranked_paths": [
+        "metadata/receipt_x41.docx"
+      ],
+      "latencies_ms": [
+        0.296,
+        0.288,
+        0.305
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q13",
+      "category": "metadata",
+      "mode": "keyword",
+      "ranked_paths": [
+        "metadata/meeting_tuesday.txt"
+      ],
+      "latencies_ms": [
+        0.356,
+        0.369,
+        0.348
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q14",
+      "category": "metadata",
+      "mode": "keyword",
+      "ranked_paths": [
+        "metadata/garden_2026.pdf"
+      ],
+      "latencies_ms": [
+        0.285,
+        0.302,
+        0.279
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q15",
+      "category": "metadata",
+      "mode": "keyword",
+      "ranked_paths": [
+        "metadata/workshop_c12.docx"
+      ],
+      "latencies_ms": [
+        0.321,
+        0.304,
+        0.28
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q16",
+      "category": "ocr",
+      "mode": "keyword",
+      "ranked_paths": [
+        "ocr/notice.jpg"
+      ],
+      "latencies_ms": [
+        0.355,
+        0.373,
+        0.345
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q17",
+      "category": "ocr",
+      "mode": "keyword",
+      "ranked_paths": [
+        "ocr/capture.png"
+      ],
+      "latencies_ms": [
+        0.352,
+        0.367,
+        0.345
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q18",
+      "category": "ocr",
+      "mode": "keyword",
+      "ranked_paths": [
+        "ocr/poster.jpg"
+      ],
+      "latencies_ms": [
+        0.309,
+        0.286,
+        0.333
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q19",
+      "category": "ocr",
+      "mode": "keyword",
+      "ranked_paths": [
+        "ocr/scan.png"
+      ],
+      "latencies_ms": [
+        0.315,
+        0.281,
+        0.281
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q20",
+      "category": "ocr",
+      "mode": "keyword",
+      "ranked_paths": [
+        "ocr/sign.jpg"
+      ],
+      "latencies_ms": [
+        0.312,
+        0.285,
+        0.282
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q01",
+      "category": "exact",
+      "mode": "semantic",
+      "ranked_paths": [
+        "exact/Orion-482.txt",
+        "archive/entry_046.txt",
+        "archive/entry_186.docx",
+        "archive/entry_081.docx",
+        "archive/entry_011.pdf",
+        "archive/entry_116.pdf",
+        "archive/entry_151.txt",
+        "archive/entry_109.txt",
+        "archive/entry_164.pdf",
+        "archive/entry_144.docx"
+      ],
+      "latencies_ms": [
+        6.937,
+        6.869,
+        7.034
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q02",
+      "category": "exact",
+      "mode": "semantic",
+      "ranked_paths": [
+        "exact/ZEPHYR-19.pdf",
+        "archive/entry_175.txt",
+        "archive/entry_105.docx",
+        "archive/entry_070.txt",
+        "archive/entry_140.pdf",
+        "archive/entry_035.pdf",
+        "other/note_35.docx",
+        "archive/entry_169.txt",
+        "archive/entry_157.txt",
+        "archive/entry_109.txt"
+      ],
+      "latencies_ms": [
+        7.324,
+        8.279,
+        7.112
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q03",
+      "category": "exact",
+      "mode": "semantic",
+      "ranked_paths": [
+        "exact/invoice.docx",
+        "ocr/capture.png",
+        "metadata/receipt_x41.docx",
+        "ocr/sign.jpg",
+        "archive/entry_098.pdf",
+        "archive/entry_155.pdf",
+        "archive/entry_133.txt",
+        "archive/entry_028.txt",
+        "archive/entry_190.txt",
+        "archive/entry_120.docx"
+      ],
+      "latencies_ms": [
+        6.699,
+        6.61,
+        6.726
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q04",
+      "category": "exact",
+      "mode": "semantic",
+      "ranked_paths": [
+        "exact/cedar.txt",
+        "metadata/workshop_c12.docx",
+        "archive/entry_133.txt",
+        "exact/Orion-482.txt",
+        "archive/entry_192.docx",
+        "archive/entry_181.txt",
+        "ocr/scan.png",
+        "archive/entry_063.docx",
+        "conceptual/security.docx",
+        "archive/entry_168.docx"
+      ],
+      "latencies_ms": [
+        6.567,
+        8.491,
+        5.997
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q05",
+      "category": "exact",
+      "mode": "semantic",
+      "ranked_paths": [
+        "exact/atlas.pdf",
+        "archive/entry_104.pdf",
+        "archive/entry_166.txt",
+        "archive/entry_061.txt",
+        "archive/entry_034.txt",
+        "archive/entry_120.docx",
+        "archive/entry_139.txt",
+        "archive/entry_174.docx",
+        "archive/entry_096.docx",
+        "archive/entry_026.pdf"
+      ],
+      "latencies_ms": [
+        6.211,
+        5.815,
+        5.584
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q06",
+      "category": "conceptual",
+      "mode": "semantic",
+      "ranked_paths": [
+        "conceptual/incident.docx",
+        "archive/entry_022.txt",
+        "archive/entry_057.docx",
+        "metadata/receipt_x41.docx",
+        "archive/entry_092.pdf",
+        "exact/ZEPHYR-19.pdf",
+        "exact/cedar.txt",
+        "other/note_22.pdf",
+        "other/note_08.docx",
+        "archive/entry_162.docx"
+      ],
+      "latencies_ms": [
+        6.532,
+        6.637,
+        6.21
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q07",
+      "category": "conceptual",
+      "mode": "semantic",
+      "ranked_paths": [
+        "conceptual/energy.txt",
+        "conceptual/rest.pdf",
+        "conceptual/travel.txt",
+        "metadata/garden_2026.pdf",
+        "other/note_01.pdf",
+        "archive/entry_106.txt",
+        "archive/entry_189.docx",
+        "archive/entry_014.pdf",
+        "other/note_14.docx",
+        "archive/entry_071.pdf"
+      ],
+      "latencies_ms": [
+        6.72,
+        7.889,
+        6.675
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q08",
+      "category": "conceptual",
+      "mode": "semantic",
+      "ranked_paths": [
+        "conceptual/rest.pdf",
+        "conceptual/energy.txt",
+        "archive/entry_114.docx",
+        "archive/entry_079.txt",
+        "archive/entry_009.docx",
+        "archive/entry_044.pdf",
+        "other/note_09.txt",
+        "archive/entry_062.pdf",
+        "archive/entry_027.docx",
+        "archive/entry_132.docx"
+      ],
+      "latencies_ms": [
+        7.048,
+        6.416,
+        6.533
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q09",
+      "category": "conceptual",
+      "mode": "semantic",
+      "ranked_paths": [
+        "conceptual/security.docx",
+        "ocr/capture.png",
+        "conceptual/energy.txt",
+        "conceptual/travel.txt",
+        "exact/invoice.docx",
+        "other/note_30.txt",
+        "other/note_14.docx",
+        "archive/entry_189.docx",
+        "archive/entry_119.pdf",
+        "archive/entry_084.docx"
+      ],
+      "latencies_ms": [
+        7.596,
+        6.856,
+        6.76
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q10",
+      "category": "conceptual",
+      "mode": "semantic",
+      "ranked_paths": [
+        "conceptual/travel.txt",
+        "metadata/budget_q7.pdf",
+        "conceptual/energy.txt",
+        "other/note_07.pdf",
+        "conceptual/rest.pdf",
+        "archive/entry_007.txt",
+        "other/note_26.docx",
+        "archive/entry_042.docx",
+        "metadata/workshop_c12.docx",
+        "archive/entry_112.txt"
+      ],
+      "latencies_ms": [
+        6.475,
+        6.183,
+        7.533
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q11",
+      "category": "metadata",
+      "mode": "semantic",
+      "ranked_paths": [
+        "metadata/budget_q7.pdf",
+        "ocr/capture.png",
+        "archive/entry_063.docx",
+        "archive/entry_028.txt",
+        "archive/entry_070.txt",
+        "archive/entry_098.pdf",
+        "metadata/workshop_c12.docx",
+        "metadata/receipt_x41.docx",
+        "other/note_35.docx",
+        "archive/entry_133.txt"
+      ],
+      "latencies_ms": [
+        7.35,
+        6.892,
+        6.907
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q12",
+      "category": "metadata",
+      "mode": "semantic",
+      "ranked_paths": [
+        "metadata/receipt_x41.docx",
+        "ocr/capture.png",
+        "ocr/sign.jpg",
+        "ocr/scan.png",
+        "archive/entry_098.pdf",
+        "archive/entry_168.docx",
+        "archive/entry_133.txt",
+        "archive/entry_155.pdf",
+        "exact/invoice.docx",
+        "archive/entry_063.docx"
+      ],
+      "latencies_ms": [
+        7.776,
+        6.53,
+        6.525
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q13",
+      "category": "metadata",
+      "mode": "semantic",
+      "ranked_paths": [
+        "metadata/meeting_tuesday.txt",
+        "ocr/notice.jpg",
+        "archive/entry_122.pdf",
+        "archive/entry_052.txt",
+        "archive/entry_157.txt",
+        "metadata/workshop_c12.docx",
+        "archive/entry_192.docx",
+        "archive/entry_181.txt",
+        "archive/entry_017.pdf",
+        "archive/entry_087.docx"
+      ],
+      "latencies_ms": [
+        6.3,
+        7.139,
+        7.63
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q14",
+      "category": "metadata",
+      "mode": "semantic",
+      "ranked_paths": [
+        "metadata/garden_2026.pdf",
+        "archive/entry_139.txt",
+        "archive/entry_069.docx",
+        "archive/entry_174.docx",
+        "archive/entry_034.txt",
+        "archive/entry_104.pdf",
+        "other/note_34.pdf",
+        "archive/entry_193.txt",
+        "archive/entry_102.docx",
+        "archive/entry_190.txt"
+      ],
+      "latencies_ms": [
+        6.891,
+        6.654,
+        7.499
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q15",
+      "category": "metadata",
+      "mode": "semantic",
+      "ranked_paths": [
+        "metadata/workshop_c12.docx",
+        "archive/entry_028.txt",
+        "archive/entry_063.docx",
+        "archive/entry_157.txt",
+        "archive/entry_133.txt",
+        "archive/entry_120.docx",
+        "archive/entry_190.txt",
+        "archive/entry_168.docx",
+        "archive/entry_052.txt",
+        "archive/entry_050.pdf"
+      ],
+      "latencies_ms": [
+        7.939,
+        8.349,
+        7.425
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q16",
+      "category": "ocr",
+      "mode": "semantic",
+      "ranked_paths": [
+        "ocr/notice.jpg",
+        "other/note_24.txt",
+        "archive/entry_180.docx",
+        "archive/entry_049.txt",
+        "archive/entry_129.docx",
+        "metadata/garden_2026.pdf",
+        "archive/entry_028.txt",
+        "archive/entry_133.txt",
+        "archive/entry_040.txt",
+        "other/note_35.docx"
+      ],
+      "latencies_ms": [
+        7.34,
+        7.526,
+        7.747
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q17",
+      "category": "ocr",
+      "mode": "semantic",
+      "ranked_paths": [
+        "ocr/capture.png",
+        "archive/entry_146.pdf",
+        "archive/entry_181.txt",
+        "archive/entry_041.pdf",
+        "archive/entry_063.docx",
+        "archive/entry_076.txt",
+        "archive/entry_098.pdf",
+        "archive/entry_073.txt",
+        "archive/entry_111.docx",
+        "archive/entry_143.pdf"
+      ],
+      "latencies_ms": [
+        9.26,
+        8.364,
+        8.038
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q18",
+      "category": "ocr",
+      "mode": "semantic",
+      "ranked_paths": [
+        "archive/entry_157.txt",
+        "archive/entry_122.pdf",
+        "ocr/poster.jpg",
+        "exact/ZEPHYR-19.pdf",
+        "archive/entry_087.docx",
+        "archive/entry_182.pdf",
+        "archive/entry_192.docx",
+        "archive/entry_052.txt",
+        "ocr/scan.png",
+        "archive/entry_042.docx"
+      ],
+      "latencies_ms": [
+        8.15,
+        6.964,
+        27.307
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q19",
+      "category": "ocr",
+      "mode": "semantic",
+      "ranked_paths": [
+        "ocr/scan.png",
+        "archive/entry_173.pdf",
+        "archive/entry_157.txt",
+        "archive/entry_052.txt",
+        "archive/entry_122.pdf",
+        "archive/entry_063.docx",
+        "archive/entry_049.txt",
+        "metadata/receipt_x41.docx",
+        "archive/entry_068.pdf",
+        "archive/entry_138.docx"
+      ],
+      "latencies_ms": [
+        8.455,
+        8.217,
+        7.995
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q20",
+      "category": "ocr",
+      "mode": "semantic",
+      "ranked_paths": [
+        "ocr/sign.jpg",
+        "archive/entry_126.docx",
+        "archive/entry_091.txt",
+        "archive/entry_161.pdf",
+        "archive/entry_021.docx",
+        "archive/entry_182.pdf",
+        "archive/entry_056.pdf",
+        "archive/entry_147.docx",
+        "archive/entry_042.docx",
+        "archive/entry_077.pdf"
+      ],
+      "latencies_ms": [
+        7.882,
+        7.965,
+        8.922
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q01",
+      "category": "exact",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "exact/Orion-482.txt",
+        "archive/entry_046.txt",
+        "archive/entry_186.docx",
+        "archive/entry_081.docx",
+        "archive/entry_011.pdf",
+        "archive/entry_116.pdf",
+        "archive/entry_151.txt",
+        "archive/entry_109.txt",
+        "archive/entry_164.pdf",
+        "archive/entry_144.docx"
+      ],
+      "latencies_ms": [
+        9.261,
+        7.491,
+        8.4
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q02",
+      "category": "exact",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "exact/ZEPHYR-19.pdf",
+        "archive/entry_019.txt",
+        "other/note_19.pdf",
+        "archive/entry_175.txt",
+        "archive/entry_105.docx",
+        "archive/entry_070.txt",
+        "archive/entry_140.pdf",
+        "archive/entry_035.pdf",
+        "other/note_35.docx",
+        "archive/entry_169.txt"
+      ],
+      "latencies_ms": [
+        10.381,
+        7.973,
+        11.672
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q03",
+      "category": "exact",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "exact/invoice.docx",
+        "ocr/capture.png",
+        "metadata/receipt_x41.docx",
+        "ocr/sign.jpg",
+        "archive/entry_098.pdf",
+        "archive/entry_155.pdf",
+        "archive/entry_133.txt",
+        "archive/entry_028.txt",
+        "archive/entry_190.txt",
+        "archive/entry_120.docx"
+      ],
+      "latencies_ms": [
+        9.344,
+        10.964,
+        8.745
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q04",
+      "category": "exact",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "exact/cedar.txt",
+        "metadata/workshop_c12.docx",
+        "archive/entry_133.txt",
+        "exact/Orion-482.txt",
+        "archive/entry_192.docx",
+        "archive/entry_181.txt",
+        "ocr/scan.png",
+        "archive/entry_063.docx",
+        "conceptual/security.docx",
+        "archive/entry_168.docx"
+      ],
+      "latencies_ms": [
+        7.961,
+        8.05,
+        7.581
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q05",
+      "category": "exact",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "exact/atlas.pdf",
+        "archive/entry_104.pdf",
+        "archive/entry_166.txt",
+        "archive/entry_061.txt",
+        "archive/entry_034.txt",
+        "archive/entry_120.docx",
+        "archive/entry_139.txt",
+        "archive/entry_174.docx",
+        "archive/entry_096.docx",
+        "archive/entry_026.pdf"
+      ],
+      "latencies_ms": [
+        7.901,
+        7.107,
+        6.814
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q06",
+      "category": "conceptual",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "conceptual/incident.docx",
+        "archive/entry_022.txt",
+        "archive/entry_057.docx",
+        "metadata/receipt_x41.docx",
+        "archive/entry_092.pdf",
+        "exact/ZEPHYR-19.pdf",
+        "exact/cedar.txt",
+        "other/note_22.pdf",
+        "other/note_08.docx",
+        "archive/entry_162.docx"
+      ],
+      "latencies_ms": [
+        7.343,
+        70.126,
+        17.757
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q07",
+      "category": "conceptual",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "conceptual/travel.txt",
+        "conceptual/security.docx",
+        "conceptual/energy.txt",
+        "conceptual/rest.pdf",
+        "metadata/garden_2026.pdf",
+        "other/note_01.pdf",
+        "archive/entry_106.txt",
+        "archive/entry_189.docx",
+        "archive/entry_014.pdf",
+        "other/note_14.docx"
+      ],
+      "latencies_ms": [
+        18.512,
+        7.699,
+        8.248
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q08",
+      "category": "conceptual",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "conceptual/travel.txt",
+        "conceptual/security.docx",
+        "conceptual/rest.pdf",
+        "conceptual/energy.txt",
+        "archive/entry_114.docx",
+        "archive/entry_079.txt",
+        "archive/entry_009.docx",
+        "archive/entry_044.pdf",
+        "other/note_09.txt",
+        "archive/entry_062.pdf"
+      ],
+      "latencies_ms": [
+        7.842,
+        7.037,
+        8.259
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q09",
+      "category": "conceptual",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "conceptual/security.docx",
+        "ocr/capture.png",
+        "conceptual/energy.txt",
+        "conceptual/travel.txt",
+        "exact/invoice.docx",
+        "other/note_30.txt",
+        "other/note_14.docx",
+        "archive/entry_189.docx",
+        "archive/entry_119.pdf",
+        "archive/entry_084.docx"
+      ],
+      "latencies_ms": [
+        7.376,
+        8.107,
+        6.715
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q10",
+      "category": "conceptual",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "conceptual/travel.txt",
+        "metadata/budget_q7.pdf",
+        "conceptual/energy.txt",
+        "other/note_07.pdf",
+        "conceptual/rest.pdf",
+        "archive/entry_007.txt",
+        "other/note_26.docx",
+        "archive/entry_042.docx",
+        "metadata/workshop_c12.docx",
+        "archive/entry_112.txt"
+      ],
+      "latencies_ms": [
+        7.285,
+        7.241,
+        8.149
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q11",
+      "category": "metadata",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "metadata/budget_q7.pdf",
+        "ocr/capture.png",
+        "archive/entry_063.docx",
+        "archive/entry_028.txt",
+        "archive/entry_070.txt",
+        "archive/entry_098.pdf",
+        "metadata/workshop_c12.docx",
+        "metadata/receipt_x41.docx",
+        "other/note_35.docx",
+        "archive/entry_133.txt"
+      ],
+      "latencies_ms": [
+        7.363,
+        6.662,
+        7.416
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q12",
+      "category": "metadata",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "metadata/receipt_x41.docx",
+        "ocr/capture.png",
+        "ocr/sign.jpg",
+        "ocr/scan.png",
+        "archive/entry_098.pdf",
+        "archive/entry_168.docx",
+        "archive/entry_133.txt",
+        "archive/entry_155.pdf",
+        "exact/invoice.docx",
+        "archive/entry_063.docx"
+      ],
+      "latencies_ms": [
+        7.104,
+        7.032,
+        7.248
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q13",
+      "category": "metadata",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "metadata/meeting_tuesday.txt",
+        "ocr/notice.jpg",
+        "archive/entry_122.pdf",
+        "archive/entry_052.txt",
+        "archive/entry_157.txt",
+        "metadata/workshop_c12.docx",
+        "archive/entry_192.docx",
+        "archive/entry_181.txt",
+        "archive/entry_017.pdf",
+        "archive/entry_087.docx"
+      ],
+      "latencies_ms": [
+        8.145,
+        7.563,
+        6.851
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q14",
+      "category": "metadata",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "metadata/garden_2026.pdf",
+        "archive/entry_139.txt",
+        "archive/entry_069.docx",
+        "archive/entry_174.docx",
+        "archive/entry_034.txt",
+        "archive/entry_104.pdf",
+        "other/note_34.pdf",
+        "archive/entry_193.txt",
+        "archive/entry_102.docx",
+        "archive/entry_190.txt"
+      ],
+      "latencies_ms": [
+        6.631,
+        7.128,
+        8.771
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q15",
+      "category": "metadata",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "metadata/workshop_c12.docx",
+        "archive/entry_028.txt",
+        "archive/entry_063.docx",
+        "archive/entry_157.txt",
+        "archive/entry_133.txt",
+        "archive/entry_120.docx",
+        "archive/entry_190.txt",
+        "archive/entry_168.docx",
+        "archive/entry_052.txt",
+        "archive/entry_050.pdf"
+      ],
+      "latencies_ms": [
+        8.301,
+        7.048,
+        7.48
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q16",
+      "category": "ocr",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "ocr/notice.jpg",
+        "other/note_24.txt",
+        "archive/entry_180.docx",
+        "archive/entry_049.txt",
+        "archive/entry_129.docx",
+        "metadata/garden_2026.pdf",
+        "archive/entry_028.txt",
+        "archive/entry_133.txt",
+        "archive/entry_040.txt",
+        "other/note_35.docx"
+      ],
+      "latencies_ms": [
+        7.28,
+        6.678,
+        7.82
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q17",
+      "category": "ocr",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "ocr/capture.png",
+        "archive/entry_146.pdf",
+        "archive/entry_181.txt",
+        "archive/entry_041.pdf",
+        "archive/entry_063.docx",
+        "archive/entry_076.txt",
+        "archive/entry_098.pdf",
+        "archive/entry_073.txt",
+        "archive/entry_111.docx",
+        "archive/entry_143.pdf"
+      ],
+      "latencies_ms": [
+        7.537,
+        10.23,
+        9.926
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q18",
+      "category": "ocr",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "ocr/poster.jpg",
+        "archive/entry_157.txt",
+        "archive/entry_122.pdf",
+        "exact/ZEPHYR-19.pdf",
+        "archive/entry_087.docx",
+        "archive/entry_182.pdf",
+        "archive/entry_192.docx",
+        "archive/entry_052.txt",
+        "ocr/scan.png",
+        "archive/entry_042.docx"
+      ],
+      "latencies_ms": [
+        9.029,
+        8.816,
+        9.02
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q19",
+      "category": "ocr",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "ocr/scan.png",
+        "archive/entry_173.pdf",
+        "archive/entry_157.txt",
+        "archive/entry_052.txt",
+        "archive/entry_122.pdf",
+        "archive/entry_063.docx",
+        "archive/entry_049.txt",
+        "metadata/receipt_x41.docx",
+        "archive/entry_068.pdf",
+        "archive/entry_138.docx"
+      ],
+      "latencies_ms": [
+        9.066,
+        9.144,
+        9.266
+      ],
+      "known_file_found": true
+    },
+    {
+      "query_id": "Q20",
+      "category": "ocr",
+      "mode": "hybrid",
+      "ranked_paths": [
+        "ocr/sign.jpg",
+        "archive/entry_126.docx",
+        "archive/entry_091.txt",
+        "archive/entry_161.pdf",
+        "archive/entry_021.docx",
+        "archive/entry_182.pdf",
+        "archive/entry_056.pdf",
+        "archive/entry_147.docx",
+        "archive/entry_042.docx",
+        "archive/entry_077.pdf"
+      ],
+      "latencies_ms": [
+        9.105,
+        8.046,
+        6.964
+      ],
+      "known_file_found": true
+    }
+  ]
+}
